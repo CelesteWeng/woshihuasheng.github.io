@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woshihuasheng.github.io/"/>
-  <updated>2017-10-16T14:43:52.704Z</updated>
+  <updated>2017-10-16T15:29:19.757Z</updated>
   <id>https://woshihuasheng.github.io/</id>
   
   <author>
@@ -17,30 +17,58 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>kaohe</title>
+    <title>做工程网首页</title>
     <link href="https://woshihuasheng.github.io/2017/10/16/kaohe/"/>
     <id>https://woshihuasheng.github.io/2017/10/16/kaohe/</id>
     <published>2017-10-16T14:43:52.000Z</published>
-    <updated>2017-10-16T14:43:52.704Z</updated>
+    <updated>2017-10-16T15:29:19.757Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p>正文:<br><a href="https://woshihuasheng.github.io/qwe/index" title="xiaomi" style="display:block; border:2px solid #ccc; border-radius:5px; height:30px; width:80px; text-align:center; font-size:14px; line-height:30px;" target="_blank">在线预览</a></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;正文:&lt;br&gt;&lt;a href=&quot;https://woshihuasheng.github.io/qwe/index&quot; title=&quot;xiaomi&quot; style=&quot;display:block; border:2px solid #ccc; 
+      
+    
     </summary>
     
+      <category term="日志" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="二级目录" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95/"/>
+    
+    
+      <category term="做工程网首页" scheme="https://woshihuasheng.github.io/tags/%E5%81%9A%E5%B7%A5%E7%A8%8B%E7%BD%91%E9%A6%96%E9%A1%B5/"/>
     
   </entry>
   
   <entry>
-    <title>boot</title>
+    <title>vue.js-app</title>
     <link href="https://woshihuasheng.github.io/2017/10/16/boot/"/>
     <id>https://woshihuasheng.github.io/2017/10/16/boot/</id>
     <published>2017-10-16T14:43:41.000Z</published>
-    <updated>2017-10-16T14:43:41.389Z</updated>
+    <updated>2017-10-16T15:31:31.265Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p>正文:<br><a href="https://woshihuasheng.github.io/app/index" title="xiaomi" style="display:block; border:2px solid #ccc; border-radius:5px; height:30px; width:80px; text-align:center; font-size:14px; line-height:30px;" target="_blank">在线预览</a></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;正文:&lt;br&gt;&lt;a href=&quot;https://woshihuasheng.github.io/app/index&quot; title=&quot;xiaomi&quot; style=&quot;display:block; border:2px solid #ccc; 
+      
+    
     </summary>
     
+      <category term="日志" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="二级目录" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95/"/>
+    
+    
+      <category term="vue.js" scheme="https://woshihuasheng.github.io/tags/vue-js/"/>
     
   </entry>
   
@@ -73,16 +101,30 @@
   </entry>
   
   <entry>
-    <title>jianshe</title>
+    <title>建设银行首页</title>
     <link href="https://woshihuasheng.github.io/2017/10/16/jianshe/"/>
     <id>https://woshihuasheng.github.io/2017/10/16/jianshe/</id>
     <published>2017-10-16T14:43:26.000Z</published>
-    <updated>2017-10-16T14:43:26.761Z</updated>
+    <updated>2017-10-16T15:30:19.096Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p>正文:<br><a href="https://woshihuasheng.github.io/js/index_js" title="xiaomi" style="display:block; border:2px solid #ccc; border-radius:5px; height:30px; width:80px; text-align:center; font-size:14px; line-height:30px;" target="_blank">在线预览</a></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;正文:&lt;br&gt;&lt;a href=&quot;https://woshihuasheng.github.io/js/index_js&quot; title=&quot;xiaomi&quot; style=&quot;display:block; border:2px solid #ccc
+      
+    
     </summary>
     
+      <category term="日志" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="二级目录" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95/"/>
+    
+    
+      <category term="建设银行" scheme="https://woshihuasheng.github.io/tags/%E5%BB%BA%E8%AE%BE%E9%93%B6%E8%A1%8C/"/>
     
   </entry>
   
