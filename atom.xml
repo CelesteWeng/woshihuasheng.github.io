@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woshihuasheng.github.io/"/>
-  <updated>2017-10-04T01:03:21.387Z</updated>
+  <updated>2017-10-16T14:43:52.704Z</updated>
   <id>https://woshihuasheng.github.io/</id>
   
   <author>
@@ -17,6 +17,48 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>kaohe</title>
+    <link href="https://woshihuasheng.github.io/2017/10/16/kaohe/"/>
+    <id>https://woshihuasheng.github.io/2017/10/16/kaohe/</id>
+    <published>2017-10-16T14:43:52.000Z</published>
+    <updated>2017-10-16T14:43:52.704Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>boot</title>
+    <link href="https://woshihuasheng.github.io/2017/10/16/boot/"/>
+    <id>https://woshihuasheng.github.io/2017/10/16/boot/</id>
+    <published>2017-10-16T14:43:41.000Z</published>
+    <updated>2017-10-16T14:43:41.389Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>jianshe</title>
+    <link href="https://woshihuasheng.github.io/2017/10/16/jianshe/"/>
+    <id>https://woshihuasheng.github.io/2017/10/16/jianshe/</id>
+    <published>2017-10-16T14:43:26.000Z</published>
+    <updated>2017-10-16T14:43:26.761Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>hello</title>
     <link href="https://woshihuasheng.github.io/2017/10/04/hello/"/>
     <id>https://woshihuasheng.github.io/2017/10/04/hello/</id>
@@ -24,6 +66,30 @@
     <updated>2017-10-04T01:03:21.387Z</updated>
     
     <content type="html"><![CDATA[<p>摘要:<br><a id="more"></a><br>正文:</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;摘要:&lt;br&gt;
+    
+    </summary>
+    
+      <category term="日志" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+      <category term="二级目录" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95/"/>
+    
+    
+      <category term="hello" scheme="https://woshihuasheng.github.io/tags/hello/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello</title>
+    <link href="https://woshihuasheng.github.io/2017/10/04/xiaomi/"/>
+    <id>https://woshihuasheng.github.io/2017/10/04/xiaomi/</id>
+    <published>2017-10-04T01:01:23.000Z</published>
+    <updated>2017-10-16T14:57:44.682Z</updated>
+    
+    <content type="html"><![CDATA[<p>摘要:<br><a id="more"></a><br>正文:<br><a href="https://woshihuasheng.github.io/qwe/index/">https://woshihuasheng.github.io/qwe/index/</a></p>]]></content>
     
     <summary type="html">
     
