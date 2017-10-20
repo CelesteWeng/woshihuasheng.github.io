@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>花生的博客</title>
+  <title>花生 - Blog</title>
   
   <subtitle>一天进步两点</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woshihuasheng.github.io/"/>
-  <updated>2017-10-16T18:14:15.246Z</updated>
+  <updated>2017-10-19T08:48:30.357Z</updated>
   <id>https://woshihuasheng.github.io/</id>
   
   <author>
-    <name>why</name>
+    <name>花生</name>
     
   </author>
   
@@ -21,7 +21,7 @@
     <link href="https://woshihuasheng.github.io/2017/10/17/boot/"/>
     <id>https://woshihuasheng.github.io/2017/10/17/boot/</id>
     <published>2017-10-16T18:14:41.000Z</published>
-    <updated>2017-10-16T18:14:15.246Z</updated>
+    <updated>2017-10-19T08:48:30.357Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a><p>正文:<br><a href="https://woshihuasheng.github.io/xiangying/index" title="taiyue" style="display:block; border:2px solid #ccc; border-radius:5px; height:30px; width:80px; text-align:center; font-size:14px; line-height:30px;" target="_blank">在线预览</a></p>]]></content>
     
@@ -37,10 +37,12 @@
     
       <category term="日志" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/"/>
     
-      <category term="二级目录" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95/"/>
+      <category term="我的作品" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/"/>
     
     
-      <category term="响应" scheme="https://woshihuasheng.github.io/tags/%E5%93%8D%E5%BA%94/"/>
+      <category term="响应式" scheme="https://woshihuasheng.github.io/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/"/>
+    
+      <category term="我的作品" scheme="https://woshihuasheng.github.io/tags/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/"/>
     
   </entry>
   
@@ -133,7 +135,7 @@
     <link href="https://woshihuasheng.github.io/2017/10/14/hello/"/>
     <id>https://woshihuasheng.github.io/2017/10/14/hello/</id>
     <published>2017-10-14T02:14:41.000Z</published>
-    <updated>2017-10-16T18:20:14.874Z</updated>
+    <updated>2017-10-19T08:29:01.568Z</updated>
     
     <content type="html"><![CDATA[<a id="more"></a><p>正文:<br><a href="https://woshihuasheng.github.io/app/index" title="app" style="display:block; border:2px solid #ccc; border-radius:5px; height:30px; width:80px; text-align:center; font-size:14px; line-height:30px;" target="_blank">在线预览</a></p>]]></content>
     
@@ -149,7 +151,7 @@
     
       <category term="日志" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/"/>
     
-      <category term="二级目录" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/%E4%BA%8C%E7%BA%A7%E7%9B%AE%E5%BD%95/"/>
+      <category term="我的作品" scheme="https://woshihuasheng.github.io/categories/%E6%97%A5%E5%BF%97/%E6%88%91%E7%9A%84%E4%BD%9C%E5%93%81/"/>
     
     
       <category term="App" scheme="https://woshihuasheng.github.io/tags/App/"/>
@@ -174,6 +176,29 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>js整理</title>
+    <link href="https://woshihuasheng.github.io/2017/09/17/js%E6%95%B4%E7%90%86/"/>
+    <id>https://woshihuasheng.github.io/2017/09/17/js整理/</id>
+    <published>2017-09-17T01:14:40.000Z</published>
+    <updated>2017-10-19T09:02:10.983Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>js学习简单整理<a id="more"></a>一、js事件分类<br>  ondblclick （鼠标双击事件）        onmousewheel（鼠标滚轮事件）<br>   oncontextmenu（鼠标右键）         onkeydown   (键盘按下事件)<br>onkeyup     (键盘抬起事件)<br>表单事件  （获取焦点onfocus，离开焦点onblur，文本内容改变onchange)<br>  自定义事件</li></ul><hr><p>11课：<br>event 对象：用来获取事件的详细新信息：鼠标位置、键盘按键<br>键盘事件：<br>onkeydown<br>        onkeyup<br>        keyCode</p><p>ev.keyCode        获取键值 //上 38  下40 左 37 右39<br>ctrlKey  shiftKey  altKey   //ev.shiftKey 会返回true；</p><p>事件冒泡            从里向外一层层冒泡，如果有相应事件则执行</p><p>阻止事件冒泡        ev.cancelBubble=true;</p><p>焦点事件<br>浏览器区分用户输入对象，当一个元素有焦点的时候，它就可以接受用户输入 去进行交互<br>触发焦点事件的方法  1. tab 2. 点击  3. js</p><p>全选文字<br>obj.select()   复制链接、搜索框中会用到</p><p>document        在外层 不要window.onload也是没问题的<br>                    document.onclick=function(){<br>                        alert(1);<br>                    }</p><p>默认行为<br>浏览器自身具备的行为 比如右键弹出菜单<br>    submit 自动提交表单…<br>    oncontextmenu();//鼠标右键默认菜单事件</p><pre><code>阻止默认行为            return false；//解决拖拽过快的浏览器bug</code></pre><p>自定义右键菜单            obj.oncontextmenu = function(){…}</p><p>onmousemove<br>以时间间隔触发，在一个指定的时间内（很短） 如果鼠标的位置跟上一次位置发生了变化 那 么就会触发一次</p><p>点击元素变为textarea<br>contenteditable=”true”    //聊天窗口可用到<br>            <div id="box" contenteditable="true">1111</div></p><hr><p>二、window<br>2.1window 尺寸<br>三种方法（浏览器的视口，不包括工具栏和滚动条）<br>实用的 JavaScript 方案（涵盖所有浏览器）：<br>var w=window.innerWidth    //对于IE、Chrome、Firefox、Opera 以及 Safari<br>|| document.documentElement.clientWidth //IE8.7.6.5<br>|| document.body.clientWidth;</p><p>var h=window.innerHeight<br>|| document.documentElement.clientHeight<br>|| document.body.clientHeight;</p><p>2.2其他 Window 方法<br>一些其他方法：<br>window.onload() - 加载完再执行<br>window.open() - 打开新窗口<br>window.close() - 关闭当前窗口<br>window.moveTo() - 移动当前窗口<br>window.resizeTo() - 调整当前窗口的尺寸</p><p>三、清除浮动<br>    3.1子元素有浮动的情况下 父级设置宽、高会清除浮动<br>    3.2子元素有浮动的情况下 父级设置overflow:hidden;<br>    3.3子元素有浮动的情况下 父级设置class类 .clear</p><p>四、隐藏<br>    visibility:hidden;      可获取宽高<br>    display:none;           不可获取宽高</p><p>五、保留字 class 目前它还不是关键字，但是以后有可能成为关键字<br>     关键字 JS里占用的就是关键字 我们不能用它来命名</p><p>六、获取内容<br>oCont.innerHTML 它获取的是文本加节点<br>oCont.innerText 它只能获取纯文本内容</p><p>只能获取行间样式    oBox.style.width  带有px</p><p>获取非行间样式（PS:也能获取行间样式）  去了px<br>offsetWidth 包含了边框+padding<br>        offsetHeight<br>        offsetLeft 包含了marging； 有bug的 后期会讲<br>        offsetTop</p><p>获取具有定位属性的父元素<br>offsetParent </p><p>获取元素的宽度<br>clientWidth   包含padding 但是不包含border<br>    clientHeight</p><p>七、定时器<br>间隔型定时器        setInterval  /  clearInterval</p><p>延迟定时器            setTimeout  /  clearTimeout    </p><p>八、引号加‘\’转义<br>    obj.innerHTML = “<img src="\"img/"+arr[this.index]+"\"/">“;<br>//单引号性能高一些，可忽略</p><p>九、跳出循环<br>    break        跳出整个循环<br>    continue         跳出一次循环</p><p>十、for in 循环<br>10.1json<br>var data={‘name’:’张三’,’age’:29,’pass’:’1234’};<br>    for( var arr in data){<br>        alert(arr+’–’+data[arr]);<br>    }<br>10.2数组<br>var arr=[1,2,2,3,4,5,5];<br>    for(var i in arr){<br>        alert(i+’–’+arr[i]);<br>}</p><p>十一、类型转换<br>parseInt()                    parseFloat()<br>parseFloat().toFixed()     保留小数位</p><p>类型转换的方式：</p><ol><li>显式类型转换<br>parseInt()         把数字型的字符串转换成数字<br>parseFloat()         浮点数 保留小数 价格计算<br>Number()–&gt;把计算的结果转成        数字<br>2、隐式类型转换 - * /   %</li></ol><p>十二、判断是否为非数字值<br>isNaN()            不是数字：返回true；  数字：返回false；</p><p>十三、闭包<br>里面的函数能访问外面的变量、外面的不能访问里面的</p><p>十四、真假<br>假：空字符串是假 数字0是假 undefined null false<br>真：非空字符串 非0数字 非空对象null true </p><p>十五、逻辑或 ||<br>在2个都为真时，返回第一个值</p><p>十六、arguments.length<br>获取的是 <em>实际</em>  的参数 长度    </p><p>十七、offset的bug，border会算进长度里</p><p>十八、能获取行间与非行间样式<br>function getCss(obj,arr){<br>    if(obj.currentStyle){<br>        return     obj.currentStyle[arr]; //获取计算后的属性，IE<br>    }else{<br>//获取计算后的属性,google和firefox<br>        return getComputedStyle(obj,null)[arr];<br>    }<br>};</p><p>十九、 数组<br>19.1创建数组的两种方式    1. new Array();    2. arr=<a href="性能高点 常用"></a></p><p>19.2清空数组            1. arr.length=0;    2. arr=’’;</p><p>19.3增、删、反转<br>从数组尾部添加                            push()<br>从数组的头部添加                        unshift()<br>从数组的头部删除 <em>返回值</em>是删除的项        shift()<br>从数组的尾部删除 <em>返回值</em>是删除的项        pop()<br>数组的反转                                reverse() </p><hr><p>数组的增删改            splice(起始位置,删除/替换个数,替换/增加内容);<br>//第一个参数是要开始的位置 第二个参数是要替换的个数 第三个参数是要替换的内容<br>替换：起始位置,  替换个数, 替换内容；<br>添加：起始位置,  第2个参数为0,  添加的内容；<br>删除：起始位置,  删除个数；</p><hr><p>19.4数组的排序<br>arr.sort(sortby) 默认<em>排序是按</em>字母位*进行排序<br>            //参数：sortby    （可选。规定排序顺序。必须是函数。如下）<br>比较函数：<br>function num(a,b){<br>                return a-b; //正序      b-a倒序<br>            }<br>            arr.sort(num);</p><p>19.5数组的合并        1 concat(); // 也可连接字符串  不改变被连接的数组<br>2 apply(); // 会改变arr<br>var arr=[1,2,3];<br>    var arr1=[4,5,6];<br>    var arr2=[7,8,9];<br>    var res1 = arr.concat(arr1,arr2);// 需要重新声明一个变量来储存<br>arr.push.apply(arr,[arr1,arr2]);</p><p>19.6数组-&gt;字符串   1 arr.join(‘’)<br>// 如果设置参数就是分隔符 不设置的话 默认没有分割符号</p><p>2 arr.toString()     // 没有分隔符</p><p>二十、Math.<br>向下取整        Math.floor()        //只针对数字做处理<br>向上取整        Math.ceil()        //只针对数字做处理<br>随机数             Math.random()        //0~1的小数<br>四舍五入        Math.round()<br>取绝对值        Math.abs()</p><p>二十一、时间运算公式<br>天 Math.floor(t/86400) 1天 = 24<em>60</em>60<br>时 Math.floor(t%86400/3600) 1小时=60分 1分=60秒<br>分 Math.floor(t%86400%3600/60)<br>秒 t%60<br>var oDate = new Date();<br>oDate.setDate(oDate.getDate()+2);</p><p>二十二、字符串<br>22.1字符串-&gt;数组<br>split()     var str=’ada|sdas|dada’;<br>                str.split(“|”)[‘ada’,’sdas’,’dada’]*/ (凭|分割)</p><p>22.2字符串的长度<br>str.length   // 只支持读 不支持写操作</p><p>22.3获取指定位置上的字符串<br>str.charAt(1)<br>                str.charAt(1) == str[1]<br>                //str[1] 这个方法最早的时候 是不支持IE6的 </p><p>22.4获取指定位置上的编码<br>str.charCodeAt(0) </p><p>22.5把指定编码转成字符串<br>String.fromCharCode(20320) </p><p>22.6查找指定字符串出现的位置<br>indexOf()<br>//indexOf(‘s’,1) 第一个参数是要查找的字符串 第二个参数是开始查找的位置<br>            //indexOf() 当查找的字符串没有的情况下 会返回一个-1</p><p>22.7获取字符串最后一次出现的位置<br>lastIndexOf()</p><p>22.8字符串的截取        </p><ol><li>slice(start,end)   *不包含结束位<pre><code>//slice(-1)从后往前截取</code></pre><ol><li>substring(1,3)      *不包含结束位  常用<pre><code>//substring(-1) 负数位当做0来处理</code></pre></li></ol></li><li>substr(1,3)           **包含结束位置<pre><code>//substr(-1)从后往前截取</code></pre></li></ol><p>22.9字符串中字符的替换<br>str.replace()<br>第一个参数是:要查找的内容；第二个参数：要替换的内容<br>            alert(str.replace(‘a’,’<em>*</em>‘))</p><p>22.10大小写转换<br>转换小写    toLocaleLowerCase()</p><p>转换大写    toUpperCase()</p><p>二十三、节点操作<br>23.1创建节点<br>document.createElement(‘标签的名字’)<br>23.2添加子节点<br>parent.appendChild(‘要添加的节点’)  // 在父节点的后面添加子节点<br>23.3删除节点<br>parent.removeChild(‘要删除的节点’)<br>23.4找到父节点<br>parentNode<br>23.5变量获取范围<br>var 函数内部的变量 有var 就是局部变量 没有var 就是全局变量</p><p>23.6查看节点类型<br>    nodeType 查看节点类型<br>        nodeType–&gt;1         元素节点<br>         nodeType–&gt;2         属性节点<br>nodeType–&gt;3         文本节点<br>        nodeType–&gt;…        注释节点</p><p>23.7节点的4种操作方法*<br>var aFirstEle = oList.firstElementChild || oList.firstChild;<br>var aLastEle = oList.lastElementChild || oList.lastChild;<br>var aNextEle =aFirstEle.nextElementSibling || aFirstEle.nextSibling<br>var oPrevEle = aLastEle.previousElementSibling || aLastEle.previousSibling;</p><p>23.8替换节点<br>parent.replaceChild(替换的元素，被替换的元素)<br>23.9克隆节点<br>obj.cloneNode()</p><pre><code>1. obj.cloneNode(true); </code></pre><p>// 默认的情况不会clone的元素里的内容 一起克隆过 要true才可以</p><pre><code>2. 当克隆的对象有事件的时候 事件是不能被克隆过去的</code></pre><p>二十四、属性的操作<br>设置属性<br>obj.setAttribute(name,val)<br>获取属性<br>obj.getAttribute(name)<br>删除属性<br>obj.removeAttribute(name)<br>alert(oPic.src)-&gt;<a href="http://127.0.0.1:8020/JS%E7%AC%AC%E5%85%AD%E8%AF%BE/1.jpg" target="_blank" rel="external">http://127.0.0.1:8020/JS%E7%AC%AC%E5%85%AD%E8%AF%BE/1.jpg</a><br>// 相对路径</p><p>alert(oPic.getAttribute(‘src’)) -&gt;  1.jpg<br>// 使用obj.setAttribute(index,val)会显示出来</p><p>二十五、BOM操作<br>25.1打开新窗口<br>window.open(‘href’)<br>            window.open(‘<a href="https://www.baidu.com&#39;,&#39;_self" target="_blank" rel="external">https://www.baidu.com&#39;,&#39;_self</a>‘);<br>            _self 当前窗口打开<br>            _blank 在新窗口打开</p><p>25.2关闭窗口<br>window.close();     // FireFox不兼容，只能关闭js打开的页面</p><p>25.3设置浏览器地址<br>window.location=’地址’  </p><p>25.4获取浏览器的详细属性版本名称<br>window.navigator.userAgent     // Chrome Firefox</p><p>25.5在文本框中输入代码，在新打开的窗口中运行<br>                oBtn.onclick=function(){<br>                    var newPage = window.open(‘about:blank’);<br>                    newPage.document.write(oTxt.value);<br>                }</p><p>25.6系统对话框<br>警告框 alert(‘内容’) 没有返回值<br>选择框 confirm(‘提问的内容’) 返回值boolean     面试<br>输入框 prompt（’…’,’b222’）返回字符串或null(按取消)  面试<br>25.7获取可视区的尺寸<br>oW=document.documentElement.clientWidth;// 不包括滚动条的宽度<br>    oH=document.documentElement.clientHeight<br>25.8获取内容高度<br>document.body.scrollHeight<br>    //在谷歌下 内容没有超出body的高度 默认下body的高度等于可视区的高度(和版本有关)</p><p>25.9获取滚动条位置<br>window.onscroll=function(){<br>oScroTop= document.documentElement.scrollTop || document.body.scrollTop;<br>};<br>oBtn.onclick=function(){<br>    alert(oScroTop);<br>};</p><p>25.10改变窗口大小事件<br>window.onresize();  // 在窗口大小改变时，重新读取窗口尺寸用</p><p>二十六、cookie<br>26.1  JSON对象 -&gt; 字符串<br>JSON.stringify()<br>26.2  字符串JSON  -&gt; 对象<br>JSON.parse()</p><p>26.3 localStorage (只能存字符串)<br>var list ={‘name’:’张三’,’age’:20,’pass’:1233};<br>    localStorage.setItem(‘data’,JSON.stringify(list));    //将json变为字符串写入<br>    alert(JSON.parse(localStorage.getItem(‘data’)).age);// 转变为json再获取</p><pre><code>        setItem--写    getItem---读    removeItem---删除sessionStorage.setItem(&apos;name&apos;,&apos;你好&apos;)*localStorage和sessionStorage的区别         * 当窗口关闭后 sessionStorage 里面的数据也就清除掉了         * localStorage在窗口关闭的时候 数据依然是存在的</code></pre><p><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><strong><em>__</em></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong></strong>    *重点记一下  面试会问</p><p>cookie             存储数据<br>    localStorage         本地存储  html5<br>sessionStorage     本地存储<br>flashcookie<br>Cookie 是<br>存储用户信息;<br>大小是有限制;<br>运行在服务器上;<br>以文件的形式保存在客户端上;<br>            可修改的、一些重要的数据不要写cookie里;<br>一个网站的所有页面共用 一个cookie 它不能跨域;<br>        有过期时间  它是document.cookie=’’</p><p>cookie的删除  把日期设置成负数 就是删除cookie</p><hr><p>二十七、ajax<br>27.1 ajax是前端用来向服务器请求数据的 它的特点是可以局部刷新<br>    ajax要在服务器上运行</p><p>27.2 创建ajax对象：详情-&gt; 第9课 -&gt; 2创建有注释版本ajax</p><p>27.3 计算字符串结果  不能转json<br>eval();</p><p>缓存出现的原因<br>//当第一次访问页面的时候，浏览器在把页面进行缓存 在次访问该地址的时候 就会从缓存的地方去读数据<br>//好处是会加速网页打开的速度 坏处是不能及时更新数据  好处大于坏处的<br>//缓存不要乱清除  根据团队要求去清除    </p><p>27.4 时间戳<br>    oDate.getTime() // 格林尼治时间 – 现在的时间  单位：毫秒</p><p>27.5 post 和get的区别<br>    get </p><ol><li>会把数据放在地址栏上 发送  </li><li>get的安全性能底 </li><li>get的大小是有限制的<br>post </li><li>不会把数据放在地址里上  </li><li>安全性能高 </li><li><p>post是没有限制的  </p><p>   get —-用于获取数据（如：浏览帖子）<br>   post —用于上传数据（如：用户注册）</p></li></ol><p>27.6异步同步<br>同步  一边打游戏 一边看电视     AJAX 异步<br>异步  打完游戏 看电视          AJAX 同步  不用同步    //队列 进队 出队  </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;js学习简单整理
+    
+    </summary>
+    
+    
+      <category term="学习整理" scheme="https://woshihuasheng.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/"/>
+    
+      <category term="js" scheme="https://woshihuasheng.github.io/tags/js/"/>
     
   </entry>
   
