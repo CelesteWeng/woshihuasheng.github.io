@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://woshihuasheng.github.io">
-  <title>做工程网首页 | 花生 - Blog</title>
+  <title>js整理3 | 花生 - Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="正文:在线预览">
-<meta name="keywords" content="做工程网首页">
+  <meta name="description" content="作用域、闭包、ajax">
+<meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="做工程网首页">
-<meta property="og:url" content="https://woshihuasheng.github.io/2017/10/16/kaohe/index.html">
+<meta property="og:title" content="js整理3">
+<meta property="og:url" content="https://woshihuasheng.github.io/2017/08/17/js整理3/index.html">
 <meta property="og:site_name" content="花生 - Blog">
-<meta property="og:description" content="正文:在线预览">
+<meta property="og:description" content="作用域、闭包、ajax">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-16T15:29:19.757Z">
+<meta property="og:updated_time" content="2017-10-24T14:31:25.715Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="做工程网首页">
-<meta name="twitter:description" content="正文:在线预览">
+<meta name="twitter:title" content="js整理3">
+<meta name="twitter:description" content="作用域、闭包、ajax">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -153,28 +153,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-kaohe" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-js整理3" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      做工程网首页
+      js整理3
     </h1>
   
 
         
-        <a href="/2017/10/16/kaohe/" class="archive-article-date">
-  	<time datetime="2017-10-16T14:43:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-16</time>
+        <a href="/2017/08/17/js整理3/" class="archive-article-date">
+  	<time datetime="2017-08-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<p>正文:<br><a href="https://woshihuasheng.github.io/qwe/index" title="xiaomi" style="display:block; border:2px solid #ccc; border-radius:5px; height:30px; width:80px; text-align:center; font-size:14px; line-height:30px;" target="_blank">在线预览</a></p>
+        <ul>
+<li>作用域、闭包、ajax</li>
+</ul>
+<a id="more"></a>
+<h3 id="一、作用域"><a href="#一、作用域" class="headerlink" title="一、作用域"></a>一、作用域</h3><ol>
+<li>函数声明、变量定义会提前（全局）</li>
+</ol>
+<ul>
+<li>变量定义为undefined</li>
+<li>函数声明和函数调用顺序调换仍正常运行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//var a = undefined</div><div class="line">console.log(a) // undefined</div><div class="line">var a = 100</div><div class="line">console.log(a) // 100</div></pre></td></tr></table></figure>
+<ol>
+<li>循环中i的调用出错，用this.index的原因</li>
+</ol>
+<ul>
+<li>i的定义在之前，在循环中要调用i时，等程序执行到此处，i值已变<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">方法二</div><div class="line">var i</div><div class="line">for(i = 0; i &lt; 10; i++)&#123;</div><div class="line">    (function(i)&#123;</div><div class="line">        ...</div><div class="line">        alert(i)</div><div class="line">        &#125;)</div><div class="line">        ...</div><div class="line">    &#125;)(i)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="二、闭包"><a href="#二、闭包" class="headerlink" title="二、闭包"></a>二、闭包</h3><ul>
+<li>实际开发中的作用</li>
+</ul>
+<ol>
+<li>封装函数</li>
+<li>收敛权限</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">//1创建ajax对象</div><div class="line">if(window.XMLHttpRequest)&#123;</div><div class="line">	var xhr = new XMLHttpRequest;</div><div class="line">&#125;else&#123;</div><div class="line">	var xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);//兼容IE6以下版本的浏览器</div><div class="line">&#125;;</div><div class="line">//2链接 open()接受三个参数 请求方式 请求地址 是否是异步（同步几乎不用）</div><div class="line">//get是把请求的数据放到地址栏上 </div><div class="line">//post是把数据放到send上</div><div class="line">xhr.open(&apos;get&apos;,&apos;http://www.survey.com/ajax/test.txt&apos;);</div><div class="line"></div><div class="line">//3发送</div><div class="line">xhr.send();</div><div class="line"></div><div class="line">//4接收</div><div class="line">xhr.onreadystatechange=function()&#123;</div><div class="line">	if(xhr.readyState==4)&#123;//XHR对象的readyState属性表示请求/响应过程的当前活动阶段</div><div class="line">							//1-启动，调用了open()方法，未调用send()方法；</div><div class="line">							//2-发送，已经调用了send()方法，未接收到响应；</div><div class="line">							//3-接收，已经接收到部分响应数据；</div><div class="line">							//4-完成，已经接收到全部响应数据；										</div><div class="line">							//readyState的值发生变化就会调用onreadystatechange 事件									</div><div class="line">		if(xhr.status==200)&#123;</div><div class="line">			//status是状态码 200是成功 404是错误</div><div class="line">			alert(xhr.responseText)//responseText：响应返回的主体内容，为字符串类型</div><div class="line">									//responseXML</div><div class="line">		&#125;else&#123;</div><div class="line">			alert(&apos;错误&apos;+xhr.status)</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>封装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">function ajax(url,fnSCu,fnEr)&#123;</div><div class="line">	//1 创建Ajax对象</div><div class="line">	var xhr = new XMLHttpRequest;</div><div class="line">	//open(&apos;请求方式&apos;,&apos;地址&apos;,&apos;是否是异步&apos;)</div><div class="line">	//2链接服务器</div><div class="line">	xhr.open(&apos;get&apos;,url,true);</div><div class="line">	//3发送</div><div class="line">	xhr.send();				</div><div class="line">	//4当客户端跟服务端有交互的时候</div><div class="line">	xhr.onreadystatechange=function()&#123;</div><div class="line">		if(xhr.readyState==4)&#123;</div><div class="line">			if(xhr.status==200)&#123;</div><div class="line">				fnSCu(xhr.responseText)							</div><div class="line">			&#125;else&#123;</div><div class="line">				if(fnEr)&#123;</div><div class="line">					fnEr(&apos;错误，代码&apos;+xhr.status)</div><div class="line">				&#125;						</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;;</div><div class="line"></div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">function Ajax(url,fnSucc,fnEr)&#123;			</div><div class="line">	var xhr = new XMLHttpRequest;</div><div class="line">	xhr.open(&apos;get&apos;,url,true);</div><div class="line">	xhr.send();</div><div class="line">	</div><div class="line">	xhr.onreadystatechange=function()&#123;</div><div class="line">		if(xhr.readyState==4)&#123;</div><div class="line">			if(xhr.status==200)&#123;</div><div class="line">				fnSucc(xhr.responseText)							</div><div class="line">			&#125;else&#123;</div><div class="line">				if(fnEr)&#123;</div><div class="line">					fnEr(&apos;请求错误，错误编号&apos;+xhr.status)</div><div class="line">				&#125;													</div><div class="line">			&#125;</div><div class="line">		&#125;;</div><div class="line">		</div><div class="line">	&#125;;			</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>未完</p>
+<p>革命尚未成功，我仍需努力……</p>
 
       
 
@@ -214,28 +243,13 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">做工程网首页</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/日志//" class="article-tag-list-link color3">日志</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/日志/二级目录//" class="article-tag-list-link color5">二级目录</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -285,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://woshihuasheng.github.io/2017/10/16/kaohe/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://woshihuasheng.github.io/2017/08/17/js整理3/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -299,18 +313,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/17/boot/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/20/js整理4/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          响应式网页
+          js整理4
         
       </div>
     </a>
   
   
-    <a href="/2017/10/16/xiaomi/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">小米商城</div>
+    <a href="/2017/08/16/js整理2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js整理2</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -428,35 +442,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">建设银行</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">App</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">响应式</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">我的作品</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">做工程网首页</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习整理</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">小米商城</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习整理</a>
               </li>
             
             <div class="clearfix"></div>
