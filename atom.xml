@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://woshihuasheng.github.io/"/>
-  <updated>2017-10-24T14:34:58.874Z</updated>
+  <updated>2017-10-26T12:33:12.514Z</updated>
   <id>https://woshihuasheng.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CSS-vertical</title>
+    <link href="https://woshihuasheng.github.io/2017/10/26/CSS-vertical/"/>
+    <id>https://woshihuasheng.github.io/2017/10/26/CSS-vertical/</id>
+    <published>2017-10-26T12:33:12.000Z</published>
+    <updated>2017-10-26T12:33:12.514Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>CSS-horizontal</title>
+    <link href="https://woshihuasheng.github.io/2017/10/26/CSS-horizontal/"/>
+    <id>https://woshihuasheng.github.io/2017/10/26/CSS-horizontal/</id>
+    <published>2017-10-26T12:32:56.000Z</published>
+    <updated>2017-10-26T12:32:56.764Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>js整理4</title>

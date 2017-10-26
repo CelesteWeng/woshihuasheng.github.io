@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://woshihuasheng.github.io">
-  <title>js整理4 | 花生 - Blog</title>
+  <title>CSS-horizontal | 花生 - Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="date, 获取系统时间">
-<meta name="keywords" content="js">
+  <meta name="description" content="学习整理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js整理4">
-<meta property="og:url" content="https://woshihuasheng.github.io/2017/08/20/js整理4/index.html">
+<meta property="og:title" content="CSS-horizontal">
+<meta property="og:url" content="https://woshihuasheng.github.io/2017/10/26/CSS-horizontal/index.html">
 <meta property="og:site_name" content="花生 - Blog">
-<meta property="og:description" content="date, 获取系统时间">
+<meta property="og:description" content="学习整理">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-24T14:34:58.874Z">
+<meta property="og:updated_time" content="2017-10-26T12:32:56.764Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js整理4">
-<meta name="twitter:description" content="date, 获取系统时间">
+<meta name="twitter:title" content="CSS-horizontal">
+<meta name="twitter:description" content="学习整理">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -153,31 +152,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js整理4" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-CSS-horizontal" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      js整理4
+      CSS-horizontal
     </h1>
   
 
         
-        <a href="/2017/08/20/js整理4/" class="archive-article-date">
-  	<time datetime="2017-08-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-20</time>
+        <a href="/2017/10/26/CSS-horizontal/" class="archive-article-date">
+  	<time datetime="2017-10-26T12:32:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <ul>
-<li>date, 获取系统时间</li>
-</ul>
-<a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;time&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var Time=document.getElementById(&quot;time&quot;);</div><div class="line">	var Day=[&quot;日&quot;,&quot;一&quot;,&quot;二&quot;,&quot;三&quot;,&quot;四&quot;,&quot;五&quot;,&quot;六&quot;]</div><div class="line">	function time()&#123;</div><div class="line">		var date = new Date();</div><div class="line">		var dateFullYear = date.getFullYear();</div><div class="line">		var dateMonth = date.getMonth()+1;</div><div class="line">		var dateDate = date.getDate();</div><div class="line">		var dateDay = date.getDay();</div><div class="line">		var dateHours = date.getHours();</div><div class="line">		var dateMinutes = date.getMinutes();</div><div class="line">		var dateSeconds = date.getSeconds();</div><div class="line">		var str = &quot;&quot;+dateFullYear+&quot;年&quot;+dateMonth+&quot;月&quot;+dateDate+&quot;日&quot;+&quot;星期&quot;+Day[dateDay]+num(dateHours)+&quot;:&quot;+num(dateMinutes)+&quot;:&quot;+num(dateSeconds);</div><div class="line">		Time.innerHTML=str;</div><div class="line">	&#125;</div><div class="line">	time()</div><div class="line">	setInterval(time,1000);</div><div class="line">	function num(obj)&#123;</div><div class="line">		if(obj&lt;10)&#123;</div><div class="line">			obj = &quot;0&quot;+obj;</div><div class="line">			return obj;</div><div class="line">		&#125;</div><div class="line">		else&#123;</div><div class="line">			return obj;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+        
       
 
       
@@ -211,17 +206,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -272,7 +256,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://woshihuasheng.github.io/2017/08/20/js整理4/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://woshihuasheng.github.io/2017/10/26/CSS-horizontal/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +270,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/26/CSS-horizontal/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/10/26/CSS-vertical/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CSS-horizontal
+          CSS-vertical
         
       </div>
     </a>
   
   
-    <a href="/2017/08/17/js整理3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js整理3</div>
+    <a href="/2017/08/20/js整理4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js整理4</div>
       <i class="icon-circle-right"></i>
     </a>
   
