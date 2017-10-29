@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://woshihuasheng.github.io">
-  <title>box | 花生 - Blog</title>
+  <title>CSS盒模型 | 花生 - Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型CSS盒模型一、基本概念IE模型   width/height 只包含content标准模型 width/height 包含content + padding + border    内联样式： 行内的 写在html的style标签内的。   外联样式：link引入的样式表。  二、JS如何设置盒模型对应的宽和高 dom.style.wid">
+  <meta name="description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型">
+<meta name="keywords" content="学习整理,css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="box">
+<meta property="og:title" content="CSS盒模型">
 <meta property="og:url" content="https://woshihuasheng.github.io/2017/10/29/box/index.html">
 <meta property="og:site_name" content="花生 - Blog">
-<meta property="og:description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型CSS盒模型一、基本概念IE模型   width/height 只包含content标准模型 width/height 包含content + padding + border    内联样式： 行内的 写在html的style标签内的。   外联样式：link引入的样式表。  二、JS如何设置盒模型对应的宽和高 dom.style.wid">
+<meta property="og:description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-29T00:11:12.093Z">
+<meta property="og:updated_time" content="2017-10-29T00:46:00.073Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="box">
-<meta name="twitter:description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型CSS盒模型一、基本概念IE模型   width/height 只包含content标准模型 width/height 包含content + padding + border    内联样式： 行内的 写在html的style标签内的。   外联样式：link引入的样式表。  二、JS如何设置盒模型对应的宽和高 dom.style.wid">
+<meta name="twitter:title" content="CSS盒模型">
+<meta name="twitter:description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -152,14 +153,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="w-box" class="article article-type-w " itemscope itemprop="blogPost">
+            <article id="post-box" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      box
+      CSS盒模型
     </h1>
   
 
@@ -173,12 +174,10 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>清除浮动的原理 BFC JS获取宽高 IE模型 标准模型<h2 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h2><h4 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h4><h5 id="IE模型"><a href="#IE模型" class="headerlink" title="IE模型"></a>IE模型</h5></li>
+<li>清除浮动的原理 BFC JS获取宽高 IE模型 标准模型</li>
 </ul>
-<ul>
-<li>width/height 只包含content<h5 id="标准模型"><a href="#标准模型" class="headerlink" title="标准模型"></a>标准模型</h5></li>
-<li>width/height 包含content + padding + border</li>
-</ul>
+<a id="more"></a>
+<h4 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h4><p><strong>IE模型：</strong>width/height 只包含content<br><strong>标准模型：</strong>width/height 包含content + padding + border</p>
 <hr>
 <ul>
 <li>内联样式：<ol>
@@ -250,7 +249,7 @@
 <li>inherit: 从父元素继承 overflow 属性的值。</li>
 </ol>
 </li>
-<li><strong>display</strong>:<br>  | 值                | 描述                                                          |<br>  | —————– | ————————————————————- |<br>  |none                |此元素不会被显示。                                             |<br>  |block                |此元素将显示为块级元素，此元素前后会带有换行符。               |<br>  |inline                |默认。此元素会被显示为内联元素，元素前后没有换行符。           |<br>  |inline-block       |行内块元素。（CSS2.1 新增的值）。                              |<br>  |list-item            |此元素会作为列表显示。                                         |<br>  |run-in                |此元素会根据上下文作为块级元素或内联元素显示。                 |<br>  |compact            |CSS中有值compact，不过由于缺乏广泛支持，已经从CSS2.1中删除。   |<br>  |marker                |CSS 中有值 marker，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。|<br>  |table                |此元素会作为块级表格来显示（类似table），表格前后带有换行符。  |<br>  |inline-table        |此元素会作为内联表格来显示（类似table），表格前后没有换行符。  |<br>  |table-row-group    |此元素会作为一个或多个行的分组来显示（类似tbody）。            |<br>  |table-header-group |此元素会作为一个或多个行的分组来显示（类似thead）。            |<br>  |table-footer-group |此元素会作为一个或多个行的分组来显示（类似tfoot）。            |<br>  |table-row            |此元素会作为一个表格行显示（类似 tr）。                        |<br>  |table-column-group |此元素会作为一个或多个列的分组来显示（类似colgroup）。         |<br>  |table-column       |此元素会作为一个单元格列显示（类似 col）。                     |<br>  |table-cell            |此元素会作为一个表格单元格显示（类似 td 和 th）。              |<br>  |table-caption      |此元素会作为一个表格标题显示（类似 caption）。                 |<br>  |inherit            |规定应该从父元素继承 display 属性的值。                        |</li>
+<li><strong>display</strong>: (表格为啥不行，无解。。。)<br>  | 值                | 描述                                                          |<br>  | —————– | :———————————————————–: |<br>  |none                |此元素不会被显示。                                             |<br>  |block                |此元素将显示为块级元素，此元素前后会带有换行符。               |<br>  |inline                |默认。此元素会被显示为内联元素，元素前后没有换行符。           |<br>  |inline-block       |行内块元素。（CSS2.1 新增的值）。                              |<br>  |list-item            |此元素会作为列表显示。                                         |<br>  |run-in                |此元素会根据上下文作为块级元素或内联元素显示。                 |<br>  |compact            |CSS中有值compact，不过由于缺乏广泛支持，已经从CSS2.1中删除。   |<br>  |marker                |CSS 中有值 marker，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。|<br>  |table                |此元素会作为块级表格来显示（类似table），表格前后带有换行符。  |<br>  |inline-table        |此元素会作为内联表格来显示（类似table），表格前后没有换行符。  |<br>  |table-row-group    |此元素会作为一个或多个行的分组来显示（类似tbody）。            |<br>  |table-header-group |此元素会作为一个或多个行的分组来显示（类似thead）。            |<br>  |table-footer-group |此元素会作为一个或多个行的分组来显示（类似tfoot）。            |<br>  |table-row            |此元素会作为一个表格行显示（类似 tr）。                        |<br>  |table-column-group |此元素会作为一个或多个列的分组来显示（类似colgroup）。         |<br>  |table-column       |此元素会作为一个单元格列显示（类似 col）。                     |<br>  |table-cell            |此元素会作为一个表格单元格显示（类似 td 和 th）。              |<br>  |table-caption      |此元素会作为一个表格标题显示（类似 caption）。                 |<br>  |inherit            |规定应该从父元素继承 display 属性的值。                        |</li>
 </ul>
 <hr>
 
@@ -287,6 +286,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习整理</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
