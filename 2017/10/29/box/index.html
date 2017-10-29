@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://woshihuasheng.github.io">
-  <title>Archives: 2017/10 | 花生 - Blog</title>
+  <title>box | 花生 - Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="学习整理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="花生 - Blog">
-<meta property="og:url" content="https://woshihuasheng.github.io/archives/2017/10/index.html">
+  <meta name="description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型CSS盒模型一、基本概念IE模型   width/height 只包含content标准模型 width/height 包含content + padding + border    内联样式： 行内的 写在html的style标签内的。   外联样式：link引入的样式表。  二、JS如何设置盒模型对应的宽和高 dom.style.wid">
+<meta property="og:type" content="article">
+<meta property="og:title" content="box">
+<meta property="og:url" content="https://woshihuasheng.github.io/2017/10/29/box/index.html">
 <meta property="og:site_name" content="花生 - Blog">
-<meta property="og:description" content="学习整理">
+<meta property="og:description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型CSS盒模型一、基本概念IE模型   width/height 只包含content标准模型 width/height 包含content + padding + border    内联样式： 行内的 写在html的style标签内的。   外联样式：link引入的样式表。  二、JS如何设置盒模型对应的宽和高 dom.style.wid">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-10-29T00:11:12.093Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="花生 - Blog">
-<meta name="twitter:description" content="学习整理">
+<meta name="twitter:title" content="box">
+<meta name="twitter:description" content="清除浮动的原理 BFC JS获取宽高 IE模型 标准模型CSS盒模型一、基本概念IE模型   width/height 只包含content标准模型 width/height 包含content + padding + border    内联样式： 行内的 写在html的style标签内的。   外联样式：link引入的样式表。  二、JS如何设置盒模型对应的宽和高 dom.style.wid">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -151,133 +152,241 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="w-box" class="article article-type-w " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      box
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/29/box/" class="archive-article-date">
+
+        
+        <a href="/2017/10/29/box/" class="archive-article-date">
   	<time datetime="2017-10-29T00:09:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/29/box/">box</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>清除浮动的原理 BFC JS获取宽高 IE模型 标准模型<h2 id="CSS盒模型"><a href="#CSS盒模型" class="headerlink" title="CSS盒模型"></a>CSS盒模型</h2><h4 id="一、基本概念"><a href="#一、基本概念" class="headerlink" title="一、基本概念"></a>一、基本概念</h4><h5 id="IE模型"><a href="#IE模型" class="headerlink" title="IE模型"></a>IE模型</h5></li>
+</ul>
+<ul>
+<li>width/height 只包含content<h5 id="标准模型"><a href="#标准模型" class="headerlink" title="标准模型"></a>标准模型</h5></li>
+<li>width/height 包含content + padding + border</li>
+</ul>
+<hr>
+<ul>
+<li>内联样式：<ol>
+<li>行内的</li>
+<li>写在html的style标签内的。</li>
+</ol>
+</li>
+<li>外联样式：link引入的样式表。</li>
+</ul>
+<h4 id="二、JS如何设置盒模型对应的宽和高"><a href="#二、JS如何设置盒模型对应的宽和高" class="headerlink" title="二、JS如何设置盒模型对应的宽和高"></a>二、JS如何设置盒模型对应的宽和高</h4><ul>
+<li>dom.style.width/height:             只能获取内联样式，不够准确。</li>
+<li>dom.currentStyle.width/height：<br>浏览器渲染之后的样式，不管之前样式是怎么获取的，比较准确，但只有IE支持。</li>
+<li>window.getComputedStyle(dom).width/height: 和上一个api原理相似，只不过可以兼容FireFox和chome。</li>
+<li><strong>dom.getBoundingClientRect().width/height</strong>: 这个api也可以获取准确的属性值，可以获取相对视窗的绝对位置（左上角），有4个属性：<ol>
+<li>top</li>
+<li>left</li>
+<li>width</li>
+<li>height</li>
+</ol>
+</li>
+</ul>
+<h4 id="三、边距重叠问题"><a href="#三、边距重叠问题" class="headerlink" title="三、边距重叠问题"></a>三、边距重叠问题</h4><ol>
+<li>取较大值</li>
+<li>利用如下实例说明</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//父级 height:100px; </div><div class="line">//子集 height：100px; 有 margin-top:10px;</div><div class="line">//且父级的背景色不显示</div><div class="line">&lt;section id=&quot;sec&quot;&gt; </div><div class="line">	&lt;style&gt;</div><div class="line">		#sec&#123;</div><div class="line">			background: red;</div><div class="line">		&#125;</div><div class="line">		.child&#123;</div><div class="line">			height:100px;</div><div class="line">			margin-top:10px;</div><div class="line">			background:yellow;</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">	&lt;article class=&quot;child&quot;&gt;&lt;/article&gt;</div><div class="line">&lt;/section&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//父级高度变为 110px；</div><div class="line">// BFC(边距重叠解决方案)</div><div class="line">&lt;section id=&quot;sec&quot;&gt; </div><div class="line">	&lt;style&gt;</div><div class="line">		#sec&#123;</div><div class="line">			background: red;</div><div class="line">			overflow: hidden; //增加该属性</div><div class="line">		&#125;</div><div class="line">		.child&#123;</div><div class="line">			height:100px;</div><div class="line">			margin-top:10px;</div><div class="line">			background:yellow;</div><div class="line">		&#125;</div><div class="line">	&lt;/style&gt;</div><div class="line">	&lt;article class=&quot;child&quot;&gt;&lt;/article&gt;</div><div class="line">&lt;/section&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><p>BFC的<strong>概念</strong>：</p>
+<p>  块级元素格式化上下文(相应的-IFC-内联元素格式化上下文)</p>
+</li>
+<li>BFC的<strong>原理</strong>（渲染规则）<ol>
+<li>在BFC这个元素的垂直方向的边距会产生重叠</li>
+<li>BFC的区域不会与浮动元素的box重叠（用来清除浮动）</li>
+<li>BFC在页面上是一个独立的容器，外面的元素不会影响它里面的元素，反之亦然</li>
+<li>计算BFC高度时，浮动元素也会参与计算</li>
+</ol>
+</li>
+<li>如何<strong>创建</strong>BFC<ol>
+<li>float值不为none；</li>
+<li>position的值不是static或relative；</li>
+<li>display值为table、table-cell等和table有关的，block, list-item；</li>
+<li>overflow值不为visible，即hidden、scroll、auto都可，inherit(从父元素继承 overflow属性的值,所以不确定，因为可能继承到visible)</li>
+</ol>
+</li>
+<li>BFC的<strong>使用场景</strong>：<ol>
+<li><strong>边距重叠</strong>：给元素添加一个父级，并给父级创建BFC。（测试发现直接对元素创建BFC不管用，还是需要父级）</li>
+<li><strong>浮动元素重叠</strong>：2个浮动的元素，高度固定，当其中一块的内容超出，该元素会与另一浮动元素重叠，++对高度超出的元素创建BFC++，可解决该问题</li>
+<li><strong>清除浮动</strong>：BFC子元素即使是float，也会参与高度计算。（例子：子元素浮动，高度为100px，在浏览器F12发现父级高度为0，原因是float脱离文档流，没有参与计算，当给父级创建BFC，BFC计算高度时，浮动元素也会参与计算，此时父级高度变为了100px；若子元素为文字，父级有背景色，在清除浮动后，父级的背景色才可见。这就是之前用overflow：hidden；清除浮动的原理）<blockquote>
+<p>扩展</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><strong>float</strong>: left/right/none/inherit</li>
+<li><strong>position</strong>: <ol>
+<li>absolute: 绝对定位, 相对于 static 定位以外的第一个父元素进行定位。</li>
+<li>fixed: 绝对定位, 相对于浏览器窗口进行定位。</li>
+<li>relative: 相对定位, 相对于其正常位置进行定位。</li>
+<li>static: 默认值。没有定位，元素出现在正常的流中。</li>
+<li>inherit: 从父元素继承 position 属性的值。</li>
+</ol>
+</li>
+<li><strong>overflow</strong>: <ol>
+<li>visible: 默认值。内容不会被修剪，会呈现在元素框之外。</li>
+<li>hidden: 内容会被修剪，并且其余内容是不可见的。</li>
+<li>scroll: 内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</li>
+<li>auto: <strong>如果</strong>内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</li>
+<li>inherit: 从父元素继承 overflow 属性的值。</li>
+</ol>
+</li>
+<li><strong>display</strong>:<br>  | 值                | 描述                                                          |<br>  | —————– | ————————————————————- |<br>  |none                |此元素不会被显示。                                             |<br>  |block                |此元素将显示为块级元素，此元素前后会带有换行符。               |<br>  |inline                |默认。此元素会被显示为内联元素，元素前后没有换行符。           |<br>  |inline-block       |行内块元素。（CSS2.1 新增的值）。                              |<br>  |list-item            |此元素会作为列表显示。                                         |<br>  |run-in                |此元素会根据上下文作为块级元素或内联元素显示。                 |<br>  |compact            |CSS中有值compact，不过由于缺乏广泛支持，已经从CSS2.1中删除。   |<br>  |marker                |CSS 中有值 marker，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。|<br>  |table                |此元素会作为块级表格来显示（类似table），表格前后带有换行符。  |<br>  |inline-table        |此元素会作为内联表格来显示（类似table），表格前后没有换行符。  |<br>  |table-row-group    |此元素会作为一个或多个行的分组来显示（类似tbody）。            |<br>  |table-header-group |此元素会作为一个或多个行的分组来显示（类似thead）。            |<br>  |table-footer-group |此元素会作为一个或多个行的分组来显示（类似tfoot）。            |<br>  |table-row            |此元素会作为一个表格行显示（类似 tr）。                        |<br>  |table-column-group |此元素会作为一个或多个列的分组来显示（类似colgroup）。         |<br>  |table-column       |此元素会作为一个单元格列显示（类似 col）。                     |<br>  |table-cell            |此元素会作为一个表格单元格显示（类似 td 和 th）。              |<br>  |table-caption      |此元素会作为一个表格标题显示（类似 caption）。                 |<br>  |inherit            |规定应该从父元素继承 display 属性的值。                        |</li>
+</ul>
+<hr>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wechat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://woshihuasheng.github.io/2017/10/29/box/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/26/CSS-vertical/" class="archive-article-date">
-  	<time datetime="2017-10-26T12:33:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/26/CSS-vertical/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">5种css自适应布局-垂直</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/26/CSS-vertical/">5种css自适应布局-垂直</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习整理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/26/CSS-horizontal/" class="archive-article-date">
-  	<time datetime="2017-10-26T12:32:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/26/CSS-horizontal/">5种css自适应布局-水平</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习整理</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -300,8 +409,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
