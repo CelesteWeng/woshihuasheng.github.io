@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://woshihuasheng.github.io">
-  <title>js整理4 | 花生 - Blog</title>
+  <title>DOM事件类 | 花生 - Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="date, 获取系统时间">
-<meta name="keywords" content="js">
+  <meta name="description" content="DOM事件的级别，DOM事件模型，DOM事件流，捕获的具体流程，Event对象的常见应用，自定义事件">
+<meta name="keywords" content="学习整理,DOM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js整理4">
-<meta property="og:url" content="https://woshihuasheng.github.io/2017/08/20/js整理4/index.html">
+<meta property="og:title" content="DOM事件类">
+<meta property="og:url" content="https://woshihuasheng.github.io/2017/10/29/dom/index.html">
 <meta property="og:site_name" content="花生 - Blog">
-<meta property="og:description" content="date, 获取系统时间">
+<meta property="og:description" content="DOM事件的级别，DOM事件模型，DOM事件流，捕获的具体流程，Event对象的常见应用，自定义事件">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-24T14:34:58.874Z">
+<meta property="og:updated_time" content="2017-10-29T05:55:27.914Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js整理4">
-<meta name="twitter:description" content="date, 获取系统时间">
+<meta name="twitter:title" content="DOM事件类">
+<meta name="twitter:description" content="DOM事件的级别，DOM事件模型，DOM事件流，捕获的具体流程，Event对象的常见应用，自定义事件">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -153,20 +153,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-js整理4" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-dom" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      js整理4
+      DOM事件类
     </h1>
   
 
         
-        <a href="/2017/08/20/js整理4/" class="archive-article-date">
-  	<time datetime="2017-08-19T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-20</time>
+        <a href="/2017/10/29/dom/" class="archive-article-date">
+  	<time datetime="2017-10-29T05:52:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-29</time>
 </a>
         
       </header>
@@ -174,10 +174,65 @@
     <div class="article-entry" itemprop="articleBody">
       
         <ul>
-<li>date, 获取系统时间</li>
+<li>DOM事件的级别，DOM事件模型，DOM事件流，捕获的具体流程，Event对象的常见应用，自定义事件</li>
 </ul>
 <a id="more"></a>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&lt;span id=&quot;time&quot;&gt;&lt;/span&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var Time=document.getElementById(&quot;time&quot;);</div><div class="line">	var Day=[&quot;日&quot;,&quot;一&quot;,&quot;二&quot;,&quot;三&quot;,&quot;四&quot;,&quot;五&quot;,&quot;六&quot;]</div><div class="line">	function time()&#123;</div><div class="line">		var date = new Date();</div><div class="line">		var dateFullYear = date.getFullYear();</div><div class="line">		var dateMonth = date.getMonth()+1;</div><div class="line">		var dateDate = date.getDate();</div><div class="line">		var dateDay = date.getDay();</div><div class="line">		var dateHours = date.getHours();</div><div class="line">		var dateMinutes = date.getMinutes();</div><div class="line">		var dateSeconds = date.getSeconds();</div><div class="line">		var str = &quot;&quot;+dateFullYear+&quot;年&quot;+dateMonth+&quot;月&quot;+dateDate+&quot;日&quot;+&quot;星期&quot;+Day[dateDay]+num(dateHours)+&quot;:&quot;+num(dateMinutes)+&quot;:&quot;+num(dateSeconds);</div><div class="line">		Time.innerHTML=str;</div><div class="line">	&#125;</div><div class="line">	time()</div><div class="line">	setInterval(time,1000);</div><div class="line">	function num(obj)&#123;</div><div class="line">		if(obj&lt;10)&#123;</div><div class="line">			obj = &quot;0&quot;+obj;</div><div class="line">			return obj;</div><div class="line">		&#125;</div><div class="line">		else&#123;</div><div class="line">			return obj;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+<h4 id="一、基本概念：DOM事件的级别"><a href="#一、基本概念：DOM事件的级别" class="headerlink" title="一、基本概念：DOM事件的级别"></a>一、基本概念：DOM事件的级别</h4><ul>
+<li>事件级别（DOM标准定义的级别）<ol>
+<li><strong>DOM0</strong>  element.onclick = function(){}</li>
+<li><strong>DOM2</strong>  element.addEventListener(‘click’,function(){},false)<br> 默认false，冒泡；true为捕获。</li>
+<li><strong>DOM3</strong>  element.addEventListener(‘keyup’,function(){},false)<blockquote>
+<p><strong>DOM1</strong>标准并非不存在，只是没有涉及和事件相关的东西</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="二、DOM事件模型"><a href="#二、DOM事件模型" class="headerlink" title="二、DOM事件模型"></a>二、DOM事件模型</h4><ul>
+<li><strong>捕获</strong>：从上往下</li>
+<li><strong>冒泡</strong>：从下往上</li>
+</ul>
+<h4 id="三、DOM事件流"><a href="#三、DOM事件流" class="headerlink" title="三、DOM事件流"></a>三、DOM事件流</h4><ul>
+<li>浏览器为当前页面与用户做交互（如点击鼠标左键）的过程中，左键传到页面上，然后给出响应。</li>
+<li>三个阶段<ol>
+<li><strong>捕获</strong></li>
+<li><strong>目标阶段</strong>：事件通过捕获到达目标元素（如：点击的那个按钮，就为目标阶段）</li>
+<li><strong>冒泡</strong>：从目标元素上传到window对象</li>
+</ol>
+</li>
+</ul>
+<h4 id="四、描述DOM事件捕获的具体流程"><a href="#四、描述DOM事件捕获的具体流程" class="headerlink" title="四、描述DOM事件捕获的具体流程"></a>四、描述DOM事件捕获的具体流程</h4><ul>
+<li><p><strong>接收事件的顺序</strong></p>
+<ol>
+<li>window</li>
+<li>document</li>
+<li>html<br> (扩展：如何获取当前页面的html节点：document.documentElement)</li>
+<li>body<br>…<br>最终：目标元素</li>
+</ol>
+</li>
+<li><p><strong>冒泡则反向回去</strong></p>
+</li>
+</ul>
+<h4 id="五、Event对象的常见应用"><a href="#五、Event对象的常见应用" class="headerlink" title="五、Event对象的常见应用"></a>五、Event对象的常见应用</h4><ul>
+<li><strong>简介</strong>：拿用户交互的参数，比如想知道按了哪个键，鼠标点了哪个键，基本都是从Event对象拿来的。  </li>
+<li><strong>易混淆的5项</strong>：<ol>
+<li>event.preventDefault() —- 阻止默认事件</li>
+<li>event.stopPropagation() —- 阻止冒泡</li>
+<li>event.<strong>stopImmediatePropagation</strong>()<br>例：一个按钮，绑定2个事件，响应函数a、响应函数b，通过++优先级++的方式，若a被点击，b不执行，就要用到该语句，在函数a中加入该语句。</li>
+<li>event.currentTarget —-指向事件所绑定的元素（即事件委托中的父级）</li>
+<li>event.target —-始终指向事件发生时的元素</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>知识前提：</p>
+</blockquote>
+<p><strong>事件委托</strong>：把子元素的事件都委托到父元素上，绑定一次事件即可。做响应时，要判断当前是哪个元素被点击，就要用到<strong>target</strong>。  </p>
+<h4 id="六、自定义事件"><a href="#六、自定义事件" class="headerlink" title="六、自定义事件"></a>六、自定义事件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">var eve = new Event(&apos;custome&apos;);</div><div class="line">ev.addEventListener(&apos;custome&apos;, function()&#123;</div><div class="line">    console.log(&apos;custome&apos;);</div><div class="line">&#125;);</div><div class="line">ev.dispatchEvent(eve); //触发eve对象</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>CustomEvent和Event区别</strong>：CustomEvent还可以绑定obj参数，在用法上，两者一致。</li>
+</ul>
+
       
 
       
@@ -216,7 +271,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习整理</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">DOM</a>
         		</li>
       		
 		</ul>
@@ -272,7 +331,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=https://woshihuasheng.github.io/2017/08/20/js整理4/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://woshihuasheng.github.io/2017/10/29/dom/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -286,18 +345,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/10/26/CSS-horizontal/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          5种css自适应布局-水平
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/08/17/js整理3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">js整理3</div>
+    <a href="/2017/10/29/box/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">CSS盒模型</div>
       <i class="icon-circle-right"></i>
     </a>
   
